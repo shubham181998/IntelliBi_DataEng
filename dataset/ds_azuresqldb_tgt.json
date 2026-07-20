@@ -1,0 +1,17 @@
+{
+	"name": "ds_azuresqldb_tgt",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_sqldb_adls",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Sandvikgrp"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

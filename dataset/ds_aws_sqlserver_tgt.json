@@ -1,0 +1,17 @@
+{
+	"name": "ds_aws_sqlserver_tgt",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_SqlServer_src",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Customer_742026"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,46 @@
+{
+	"name": "pl_metadata_sales",
+	"properties": {
+		"activities": [
+			{
+				"name": "md_sales",
+				"type": "GetMetadata",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "ds_sales_md",
+						"type": "DatasetReference"
+					},
+					"fieldList": [
+						"columnCount",
+						"itemName",
+						"lastModified",
+						"structure"
+					],
+					"storeSettings": {
+						"type": "AzureBlobFSReadSettings",
+						"recursive": true,
+						"enablePartitionDiscovery": false
+					},
+					"formatSettings": {
+						"type": "DelimitedTextReadSettings"
+					}
+				}
+			}
+		],
+		"folder": {
+			"name": "MetaData Activity"
+		},
+		"annotations": [],
+		"lastPublishTime": "2026-07-05T12:59:06Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

@@ -1,0 +1,17 @@
+{
+	"name": "ds_adls_sqlserver_tgt",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_SqlServer_src",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "SALES_2026"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,54 @@
+{
+	"name": "ds_SqlServer_src",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_SqlServer_src",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "Emp_ID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Emp_Name",
+				"type": "varchar"
+			},
+			{
+				"name": "Location_Of_Company",
+				"type": "varchar"
+			},
+			{
+				"name": "Salary",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Date_Of_Joining",
+				"type": "date"
+			},
+			{
+				"name": "Email_Id_Of_Emp",
+				"type": "varchar"
+			},
+			{
+				"name": "Bonus",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Age",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Sandvik_Group"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

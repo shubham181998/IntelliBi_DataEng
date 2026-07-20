@@ -1,0 +1,15 @@
+{
+	"name": "df-Intellibi",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "c59833a8-fede-43d3-bd6a-8bf797f27a18",
+		"tenantId": "67370016-d269-4c84-b3a5-89731d9b645e"
+	}
+}

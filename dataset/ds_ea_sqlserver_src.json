@@ -1,0 +1,25 @@
+{
+	"name": "ds_ea_sqlserver_src",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_SqlServer_src",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"ptablename": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": {
+				"value": "@dataset().ptablename",
+				"type": "Expression"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
