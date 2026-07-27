@@ -3,7 +3,17 @@
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ls_sqlserver_param",
-			"type": "LinkedServiceReference"
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"pLsServerName": {
+					"value": "@dataset().pDsServerName",
+					"type": "Expression"
+				},
+				"pLsDatabasename": {
+					"value": "@dataset().pDsDatabaseName",
+					"type": "Expression"
+				}
+			}
 		},
 		"parameters": {
 			"pDsServerName": {
