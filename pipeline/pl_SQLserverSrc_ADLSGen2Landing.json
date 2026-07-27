@@ -22,7 +22,13 @@
 					},
 					"dataset": {
 						"referenceName": "ds_SqlServerTablesParam",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"pDsServerName": "localhost\\SQLEXPRESS",
+							"pDsDatabaseName": "dev_clintrail_edc_src",
+							"pDsSchemaName": "edcsrcmetadata",
+							"pDsTableName": "srcEdcClintrailToLandControl"
+						}
 					},
 					"firstRowOnly": false
 				}
@@ -78,7 +84,13 @@
 									"partitionOption": "None"
 								},
 								"enableStaging": false
-							}
+							},
+							"inputs": [
+								{
+									"referenceName": "ds_SqlServerTablesParam",
+									"type": "DatasetReference"
+								}
+							]
 						},
 						{
 							"name": "LookupGetMaxMetaData",
