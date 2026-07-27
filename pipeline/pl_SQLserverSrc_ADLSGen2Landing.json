@@ -83,11 +83,52 @@
 									"queryTimeout": "02:00:00",
 									"partitionOption": "None"
 								},
-								"enableStaging": false
+								"sink": {
+									"type": "ParquetSink",
+									"storeSettings": {
+										"type": "AzureBlobFSWriteSettings"
+									},
+									"formatSettings": {
+										"type": "ParquetWriteSettings"
+									}
+								},
+								"enableStaging": false,
+								"translator": {
+									"type": "TabularTranslator",
+									"typeConversion": true,
+									"typeConversionSettings": {
+										"allowDataTruncation": true,
+										"treatBooleanAsNumber": false
+									}
+								}
 							},
 							"inputs": [
 								{
 									"referenceName": "ds_SqlServerTablesParam",
+									"type": "DatasetReference",
+									"parameters": {
+										"pDsServerName": {
+											"value": "@item().SrcServerName",
+											"type": "Expression"
+										},
+										"pDsDatabaseName": {
+											"value": "@item().SrcDatabaseName",
+											"type": "Expression"
+										},
+										"pDsSchemaName": {
+											"value": "@item().SrcSchemaName",
+											"type": "Expression"
+										},
+										"pDsTableName": {
+											"value": "@item().SrcTableName",
+											"type": "Expression"
+										}
+									}
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "ls_adls_clintrail_dev",
 									"type": "DatasetReference"
 								}
 							]
