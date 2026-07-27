@@ -1,0 +1,90 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "df-Intellibi"
+		},
+		"ls_AWS s3_SQLsever_secretAccessKey": {
+			"value": ""
+		},
+		"ls_SqlServer_src_password": {
+			"value": ""
+		},
+		"ls_alds_clintrial_dev_accountKey": {
+			"value": ""
+		},
+		"ls_db_adls_clintrial_accessToken": {
+			"value": ""
+		},
+		"ls_lp_sqlsrc_raw_password": {
+			"value": ""
+		},
+		"ls_sql_raw_password": {
+			"value": ""
+		},
+		"ls_sqldb_adls_password": {
+			"value": ""
+		},
+		"ls_sqlserver_param_password": {
+			"value": ""
+		},
+		"ls_AWS s3_SQLsever_properties_typeProperties_accessKeyId": {
+			"value": "AKIAYW4DNIIUIHIJRVNQ"
+		},
+		"ls_SqlServer_src_properties_typeProperties_server": {
+			"value": "localhost\\SQLEXPRESS"
+		},
+		"ls_SqlServer_src_properties_typeProperties_database": {
+			"value": "Practice Session"
+		},
+		"ls_SqlServer_src_properties_typeProperties_userName": {
+			"value": "DESKTOP-79VG7JT\\Hp"
+		},
+		"ls_alds_clintrial_dev_properties_typeProperties_url": {
+			"value": "https://storeclintrialdev.dfs.core.windows.net/"
+		},
+		"ls_db_adls_clintrial_properties_typeProperties_existingClusterId": {
+			"value": "0709-142423-xcxdusgr"
+		},
+		"ls_lp_sqlsrc_raw_properties_typeProperties_server": {
+			"value": "localhost\\SQLEXPRESS"
+		},
+		"ls_lp_sqlsrc_raw_properties_typeProperties_database": {
+			"value": "Dev_HealthConnect_Raw"
+		},
+		"ls_lp_sqlsrc_raw_properties_typeProperties_userName": {
+			"value": "DESKTOP-79VG7JT\\Hp"
+		},
+		"ls_sql_raw_properties_typeProperties_server": {
+			"value": "localhost\\SQLEXPRESS"
+		},
+		"ls_sql_raw_properties_typeProperties_database": {
+			"value": "Dev_HealthConnect_Raw"
+		},
+		"ls_sql_raw_properties_typeProperties_userName": {
+			"value": "CloudSA7d50f481"
+		},
+		"ls_sqldb_adls_properties_typeProperties_server": {
+			"value": "sql-clintrial-dev.database.windows.net"
+		},
+		"ls_sqldb_adls_properties_typeProperties_database": {
+			"value": "sqldb_clintrial_dev"
+		},
+		"ls_sqldb_adls_properties_typeProperties_userName": {
+			"value": "CloudSA7d50f481"
+		},
+		"ls_sqlserver_param_properties_typeProperties_server": {
+			"value": "@{linkedService().pLsServerName}"
+		},
+		"ls_sqlserver_param_properties_typeProperties_database": {
+			"value": "@{linkedService().pLsDatabasename}"
+		},
+		"ls_sqlserver_param_properties_typeProperties_userName": {
+			"value": "DESKTOP-79VG7JT\\Hp"
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://sqlserverclintrailvault.vault.azure.net/"
+		}
+	}
+}
